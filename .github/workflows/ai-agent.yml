@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   respond:
-    if: github.actor == 'jenle25'
+    if: github.actor == 'jenle52'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
