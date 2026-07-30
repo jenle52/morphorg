@@ -1,0 +1,20 @@
+name: Universal AI Agent
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created]
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Run DeepSeek Brain
+        uses: original-agent-action/deepseek-repo-agent@v2 # Официальный агентский контур
+        with:
+          api-key: ${{ secrets.DEEPSEEK_API_KEY }}
+          allowed-directories: 'knowledge-base, src'
+          enable-web-search: true
