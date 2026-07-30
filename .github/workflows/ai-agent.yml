@@ -5,15 +5,20 @@ on:
   issue_comment:
     types: [created]
 
+permissions:
+  issues: write
+  contents: write
+
 jobs:
   run-agent:
+    if: github.actor == 'jenle25'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
 
       - name: Run DeepSeek Brain
-        uses: original-agent-action/deepseek-repo-agent@v2 # Официальный агентский контур
+        uses: original-agent-action/deepseek-repo-agent@v2
         with:
           api-key: ${{ secrets.DEEPSEEK_API_KEY }}
           allowed-directories: 'knowledge-base, src'
