@@ -1,0 +1,23 @@
+site_name: MORPHORG
+site_description: Практики культурной трансформации
+site_author: Morphorg Team
+repo_name: jenle52/morphorg
+theme:
+  name: material
+  language: ru
+  logo: assets/morph-logo.png
+nav:
+  - Главная: index.md
+  - О проекте: about.md
+  - Концепты: concepts.md
+  - Практики: practices.md
+  - Методология: methodology.md
+  - Материалы: materials.md
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - pymdownx.superfences
+plugins:
+  - search
