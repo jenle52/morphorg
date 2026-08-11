@@ -1,0 +1,50 @@
+{
+  "entities": [
+    {
+      "id": "concept.distributed_cognitive_network",
+      "type": "Concept",
+      "label": "Распределённая когнитивная сеть",
+      "description": "Сеть узлов (людей, групп, агентов), обменивающихся смыслами и верифицирующих знания."
+    },
+    {
+      "id": "concept.cultural_programming",
+      "type": "Concept",
+      "label": "Культурное программирование пространства",
+      "description": "Формирование ритуалов, норм и образовательных траекторий для синхронизации смыслов."
+    },
+    {
+      "id": "concept.basic_soft_freedom",
+      "type": "Concept",
+      "label": "Базовый софт свободы",
+      "description": "Набор культурных навыков: рационализм, свобода, героизм."
+    },
+    {
+      "id": "concept.passion_self_management",
+      "type": "Concept",
+      "label": "Страсть к управлению собственной жизнью",
+      "description": "Мотивация автономии и ответственности как культурный драйвер."
+    }
+  ],
+  "relations": [
+    {
+      "subject": "concept.distributed_cognitive_network",
+      "predicate": "supports",
+      "object": "concept.basic_soft_freedom",
+      "description": "Сеть поддерживает распространение культурных навыков через практики и инструменты."
+    },
+    {
+      "subject": "concept.cultural_programming",
+      "predicate": "encodes",
+      "object": "concept.passion_self_management",
+      "description": "Культурные формы закрепляют практики самоуправления и автономии."
+    }
+  ],
+  "schema": {
+    "Concept": {
+      "properties": ["id", "type", "label", "description"]
+    },
+    "Relation": {
+      "properties": ["subject", "predicate", "object", "description"]
+    }
+  }
+}
